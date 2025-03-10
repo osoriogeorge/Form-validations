@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validations</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <form id="registrationForm" novalidate>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="user@example.com"
+      />
+      <span class="error" id="emailError"></span>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="UK">UK</option>
+        <option value="Australia">Australia</option>
+      </select>
+      <span class="error" id="countryError"></span>
+
+      <label for="postal_code">Postal Code:</label>
+      <input
+        type="text"
+        id="postal_code"
+        name="postal_code"
+        placeholder="1234.."
+        required
+      />
+      <span class="error" id="postalCodeError"></span>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required />
+      <span class="error" id="passwordError"></span>
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        required
+      />
+      <span class="error" id="confirmPasswordError"></span>
+
+      <span class="error" id="errorMessage"></span>
+
+      <button type="submit">Register</button>
+    </form>
+  </body>
+</html>
